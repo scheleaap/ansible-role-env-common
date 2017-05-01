@@ -1,7 +1,1 @@
-.vagrant
-src/group_vars/*.yml
-src/host_vars/*.yml
-src/hosts
-*.log
-*.retry
 *~
