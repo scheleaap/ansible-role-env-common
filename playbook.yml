@@ -1,4 +1,4 @@
 ---
 - hosts: all
   roles:
-    - role: env-common
+    - role: ansible-role-env-common
