@@ -7,6 +7,7 @@
   git:
     repo: https://scheleaap@github.com/scheleaap/zsh-config.git
     dest: /home/{{ env_common_username }}/.zsh
+    version: temporary-master
 - name: "Configure the zsh configuration repository"
   git_config:
     repo: /home/{{ env_common_username }}/.zsh
