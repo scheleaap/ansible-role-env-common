@@ -1,1 +1,15 @@
+# General
 *~
+*.log
+
+# Python
+*.pyc
+__pycache__/
+
+# Other
+.cache
+.molecule
+.vagrant
+
+# Mine
+vault
