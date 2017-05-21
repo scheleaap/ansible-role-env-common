@@ -11,6 +11,7 @@ galaxy_info:
       - vivid
       - wily
       - xenial
+      - zesty
     - name: Debian
       versions:
       - jessie

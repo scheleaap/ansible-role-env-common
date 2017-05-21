@@ -1,5 +1,5 @@
 ---
-env_common_username: "{{ ansible_user }}"
+env_common_username: "{{ ansible_user_id }}"
 git_user_email: user@example.com
 git_user_name: Example User
 git_cache_timeout: 3600
