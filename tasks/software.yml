@@ -6,11 +6,12 @@
 - name: "Install common packages"
   become: true
   apt:
-    name: "{{ item }}"
-  with_items:
-    - curl
-    - wget
-    - git
-    - ssh
-    - htop
-    - joe
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - curl
+      - wget
+      - git
+      - ssh
+      - htop
+      - joe
