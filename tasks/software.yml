@@ -9,9 +9,11 @@
     name: "{{ packages }}"
   vars:
     packages:
+      - aptitude
       - curl
-      - wget
       - git
-      - ssh
       - htop
       - joe
+      - net-tools
+      - ssh
+      - wget
