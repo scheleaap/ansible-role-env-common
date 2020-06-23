@@ -5,10 +5,10 @@
     value: "{{ item.value }}"
     scope: global
   with_items:
-    - { name: "credential.helper", value: "cache --timeout={{ git_cache_timeout }}" }
+    - { name: "credential.helper", value: "cache --timeout={{ env_common_git_cache_timeout }}" }
     - { name: "push.default", value: "simple" }
-    - { name: "user.name", value: "{{ git_user_name }}" }
-    - { name: "user.email", value: "{{ git_user_email }}" }
+    - { name: "user.name", value: "{{ env_common_git_user_name }}" }
+    - { name: "user.email", value: "{{ env_common_git_user_email }}" }
     - { name: "alias.co", value: "checkout" }
     - { name: "alias.br", value: "branch" }
     - { name: "alias.ci", value: "commit" }
