@@ -15,8 +15,8 @@
     value: "{{ item.value }}"
     scope: local
   with_items:
-    - { name: "user.name", value: "{{ git_user_name }}" }
-    - { name: "user.email", value: "{{ git_user_email }}" }
+    - { name: "user.name", value: "{{ env_common_zsh_git_user_name }}" }
+    - { name: "user.email", value: "{{ env_common_zsh_git_user_email }}" }
 - name: "Set up .zshrc"
   file:
     state: link

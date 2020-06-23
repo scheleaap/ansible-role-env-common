@@ -3,6 +3,8 @@ env_common_username: "{{ ansible_user_id }}"
 env_common_git_user_email: "{{ git_user_email }}"
 env_common_git_user_name: "{{ git_user_name }}"
 env_common_git_cache_timeout: "{{ git_cache_timeout }}"
+env_common_zsh_git_user_email: "{{ git_user_email }}"
+env_common_zsh_git_user_name: "{{ git_user_name }}"
 
 # Deprecated
 git_user_email: user@example.com
