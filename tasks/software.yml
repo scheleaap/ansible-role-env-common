@@ -10,6 +10,7 @@
   vars:
     packages:
       - aptitude
+      - bat
       - curl
       - git
       - htop
