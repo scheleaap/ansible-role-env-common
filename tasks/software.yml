@@ -10,7 +10,6 @@
   vars:
     packages:
       - aptitude
-      - bat
       - curl
       - git
       - htop
@@ -18,3 +17,8 @@
       - net-tools
       - ssh
       - wget
+- name: "Install common packages (Ubuntu)"
+  become: true
+  apt:
+    name: bat
+  when: ansible_distribution == "Ubuntu"
