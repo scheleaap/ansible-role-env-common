@@ -14,7 +14,8 @@ Stuff I want everywhere.
 
 ## Dependencies
 
-None
+Collections:
+* community.general
 
 
 ## Example Playbook
