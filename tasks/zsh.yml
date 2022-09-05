@@ -3,7 +3,7 @@
   become: true
   apt:
     name: zsh
-- name: "Check out the zsh configuration repository"
+- name: "Clone the zsh configuration repository"
   git:
     repo: https://scheleaap@github.com/scheleaap/zsh-config.git
     dest: /home/{{ env_common_username }}/.zsh

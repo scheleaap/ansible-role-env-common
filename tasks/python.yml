@@ -1,0 +1,34 @@
+---
+- name: "Clone Pyenv Git repository"
+  git:
+    repo: https://github.com/pyenv/pyenv.git
+    dest: /home/{{ env_common_username }}/.pyenv
+    version: master
+- name: "Refresh apt cache"
+  become: true
+  apt:
+    update_cache: true
+- name: "Install Python build dependencies"
+  become: true
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - build-essential
+      - curl
+      - libbz2-dev
+      - libffi-dev
+      - liblzma-dev
+      - libncursesw5-dev
+      - libreadline-dev
+      - libsqlite3-dev
+      - libssl-dev
+      - libxml2-dev
+      - libxmlsec1-dev
+      - llvm
+      - make
+      - tk-dev
+      - wget
+      - xz-utils
+      - zlib1g-dev
+  
