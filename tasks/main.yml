@@ -2,10 +2,10 @@
 #- name: "Print debug info"
 #  debug:
 #    msg: "Configuring role 'env-common' for user '{{ env_common_username }}'"
-- include: software.yml
-- include: git.yml
-- include: python.yml
-- include: zsh.yml
+- import_tasks: software.yml
+- import_tasks: git.yml
+- import_tasks: python.yml
+- import_tasks: zsh.yml
 # Disabled because it overwrites any changes made to PATH and exports configured by other Ansible tasks.
 #- name: ".bash_aliases"
 #  copy:
