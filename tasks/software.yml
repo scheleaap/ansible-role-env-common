@@ -7,18 +7,26 @@
   vars:
     packages:
       - aptitude
-      - containerd.io # Related to Docker
       - curl
-      - docker-buildx-plugin
-      - docker-ce
-      - docker-ce-cli
-      - docker-compose-plugin
       - git
       - htop
       - joe
       - net-tools
       - ssh
       - wget
+- name: "Install Docker packages"
+  become: true
+  apt:
+    name: "{{ packages }}"
+    update_cache: true
+  vars:
+    packages:
+      - containerd.io
+      - docker-buildx-plugin
+      - docker-ce
+      - docker-ce-cli
+      - docker-compose-plugin
+  when: env_common_install_docker == true
 # - name: "Install common packages (Ubuntu)"
 #   become: true
 #   apt:
