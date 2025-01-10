@@ -2,6 +2,7 @@
 #- name: "Print debug info"
 #  debug:
 #    msg: "Configuring role 'env-common' for user '{{ env_common_username }}'"
+- import_tasks: apt-repos.yml
 - import_tasks: software.yml
 - import_tasks: git.yml
 - import_tasks: python.yml

@@ -1,0 +1,22 @@
+---
+- name: "Ensure /etc/sources.list.d exists"
+  become: true
+  file:
+    path: /etc/sources.list.d
+    state: directory
+    mode: 0755
+- name: "Ensure GnuPG is installed"
+  become: true
+  apt:
+    name: gnupg
+    state: present
+- name: "Ensure Docker APT repo is present"
+  become: true
+  ansible.builtin.deb822_repository:
+    name: docker
+    types: [deb]
+    uris: "https://download.docker.com/linux/ubuntu"
+    signed_by: "https://download.docker.com/linux/ubuntu/gpg"
+    suites: ["{{ ansible_distribution_release }}"]
+    components: [stable]
+    architectures: amd64
