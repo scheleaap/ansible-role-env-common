@@ -5,11 +5,16 @@
     path: /etc/sources.list.d
     state: directory
     mode: 0755
-- name: "Ensure GnuPG is installed"
+- name: "Ensure dependencies for installation are installed"
   become: true
   apt:
-    name: gnupg
+    name: "{{ packages }}"
     state: present
+    update_cache: true
+  vars:
+    packages:
+      - gnupg
+      - python3-debian
 - name: "Ensure Docker APT repo is present"
   become: true
   ansible.builtin.deb822_repository:
