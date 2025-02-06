@@ -25,3 +25,4 @@
     suites: ["{{ ansible_distribution_release }}"]
     components: [stable]
     architectures: amd64
+  when: env_common_install_docker == true
