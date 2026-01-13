@@ -11,6 +11,8 @@
       - git
       - htop
       - joe
+      - language-pack-en
+      - nano
       - net-tools
       - ssh
       - wget
