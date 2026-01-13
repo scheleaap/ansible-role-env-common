@@ -22,7 +22,7 @@
     types: [deb]
     uris: "https://download.docker.com/linux/ubuntu"
     signed_by: "https://download.docker.com/linux/ubuntu/gpg"
-    suites: ["{{ ansible_distribution_release }}"]
+    suites: ["{{ ansible_facts['distribution_release'] }}"]
     components: [stable]
     architectures: amd64
   when: env_common_install_docker == true
