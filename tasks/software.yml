@@ -8,6 +8,7 @@
     packages:
       - aptitude
       - curl
+      - direnv
       - git
       - htop
       - joe
