@@ -24,5 +24,5 @@
     signed_by: "https://download.docker.com/linux/ubuntu/gpg"
     suites: ["{{ ansible_facts['distribution_release'] }}"]
     components: [stable]
-    architectures: amd64
+    architectures: "{{ 'arm64' if ansible_architecture == 'aarch64' else 'amd64' }}"
   when: env_common_install_docker == true
