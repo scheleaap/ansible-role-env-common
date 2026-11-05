@@ -38,3 +38,7 @@
   ansible.builtin.file:
     path: /home/{{ env_common_username }}/.pyenv
     state: absent
+- name: "Install uv"
+  community.general.pipx:
+    name: uv
+    state: present
